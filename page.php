@@ -9,7 +9,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package Fiction_Demo_Company
+ * @package democompany
  */
 
 get_header();

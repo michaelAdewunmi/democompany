@@ -1,2 +1,2 @@
-# fiction_demo_company
+# democompany
 An Awesome Theme for rt Demo company

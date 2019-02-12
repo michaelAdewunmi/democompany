@@ -5,7 +5,9 @@
  * navigation support for dropdown menus.
  */
 ( function() {
-	var container, button, menu, links, i, len;
+	var header, container, button, menu, links, i, len;
+
+	header = document.getElementById( 'masthead');
 
 	container = document.getElementById( 'site-navigation' );
 	if ( ! container ) {
@@ -35,10 +37,15 @@
 			container.className = container.className.replace( ' toggled', '' );
 			button.setAttribute( 'aria-expanded', 'false' );
 			menu.setAttribute( 'aria-expanded', 'false' );
+			header.classList.remove('menu-opened');
+			console.log(header)
+
 		} else {
 			container.className += ' toggled';
 			button.setAttribute( 'aria-expanded', 'true' );
 			menu.setAttribute( 'aria-expanded', 'true' );
+			header.classList.add('menu-opened');
+			console.log(header)
 		}
 	};
 

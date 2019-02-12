@@ -14,3 +14,13 @@
 	clear: both;
 	@include center-block;
 }
+
+.top-15 {
+	padding-top: 15px;
+}
+
+@media (min-width: 576px) {
+	.container {
+		max-width: 960px;
+	}
+}

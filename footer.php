@@ -6,26 +6,35 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package Fiction_Demo_Company
+ * @package democompany
  */
 
 ?>
 
 	</div><!-- #content -->
 
-	<footer id="colophon" class="site-footer">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'fiction_demo_company' ) ); ?>">
+	<footer id="colophon" class="site-footer container-fluid">
+
+		<div class="container row">
+			<div class="col-12 col-md-7">
+				<div class="footer-nav">
+					<?php
+						wp_nav_menu( array(
+							'theme_location' => 'footer-menu',
+							'menu_id'        => 'footer-menu',
+						) );
+					?>
+				</div>
+					<p class="copyright-content">&copy; <?php echo date("Y") . ' ' . get_theme_mod('copyright_info') ?></p>
+			</div>
+			<div class="footer-img-holder col-12 col-md-5">
 				<?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'fiction_demo_company' ), 'WordPress' );
+					$footer_logo = get_theme_mod('footer_logo_url') ? get_theme_mod('footer_logo_url') : get_theme_file_uri() . '/images/logo.jpg';
 				?>
-			</a>
-			<span class="sep"> | </span>
-				<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'fiction_demo_company' ), 'fiction_demo_company', '<a href="http://underscores.me/">Michael Osikoya</a>' );
-				?>
+				<a href="<?php site_url("/"); ?>">
+					<img class="footer-logo" src="<?php echo $footer_logo; ?>" alt="democompany_logo" />
+				</a>
+			</div>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->

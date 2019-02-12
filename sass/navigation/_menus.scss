@@ -1,8 +1,6 @@
 .main-navigation {
 	clear: both;
 	display: block;
-	float: left;
-	width: 100%;
 
 	ul {
 		display: none;
@@ -50,7 +48,7 @@
 	}
 
 	li {
-		float: left;
+		margin-left: 20px;
 		position: relative;
 
 		&:hover > a,
@@ -61,6 +59,13 @@
 	a {
 		display: block;
 		text-decoration: none;
+		font-family: Tahoma;
+		color: $color__link-nav;
+		font-size: 15px;
+
+		&:hover, &:active, &:focus, &:visited {
+			color: $color__link-hover;
+		}
 	}
 
 	.current_page_item > a,
@@ -71,17 +76,95 @@
 }
 
 /* Small menu. */
-.menu-toggle,
-.main-navigation.toggled ul {
-	display: block;
+.menu-toggle {
+	position: absolute;
+    top: -62px;
+	right: 0;
+	background: transparent;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	width: 55px;
+    height: 28px;
+
+	&:active, &:focus {
+		outline: none;
+		border: none;
+	}
 }
 
-@media screen and (min-width: 37.5em) {
+.hamburger, .hamburger::before, .hamburger::after {
+	display: block;
+    width: 32px;
+    height: 3px;
+    background: #333;
+	border-radius: 30%;
+	position: absolute;
+	transition: all .3s cubic-bezier(0.58, 0, 0, 1.86);
+}
+
+.hamburger::before, .hamburger::after {
+	content: '';
+}
+
+.hamburger::before {
+	top: -5px;
+}
+
+.hamburger::after {
+	bottom: -5px;
+}
+
+.menu-toggle,
+.main-navigation.toggled {
+
+	.menu-toggle {
+		.opaque{
+			opacity: 0;
+		}
+		.hamburger:before{
+			transform: rotate(45deg);
+			top: 0;
+			opacity: 1;
+		}
+		.hamburger:after{
+			transform: rotate(-45deg);
+			bottom: 0;
+			opacity: 1;
+		}
+	}
+	ul {
+		display: block;
+
+		li {
+			padding: 20px 0;
+    		border-bottom: 1px dotted #ececec;
+		}
+	}
+
+}
+
+@media screen and (min-width: $query__medium) {
 	.menu-toggle {
 		display: none;
 	}
 	.main-navigation ul {
-		display: block;
+		display: flex;
+		justify-content: flex-end;
+
+		ul {
+			background: white;
+			justify-content: flex-start;
+			flex-direction: column;
+
+			li {
+				margin-top: 20px;
+
+				&:last-of-type {
+					margin-bottom: 15px;
+				}
+			}
+		}
 	}
 }
 

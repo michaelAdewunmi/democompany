@@ -30,4 +30,8 @@ figure {
 	margin: 1em 0; /* Extra wide images within figure tags don't overflow the content area. */
 }
 
+.custom-logo {
+	max-width: 70%;
+}
+
 @import "tables";

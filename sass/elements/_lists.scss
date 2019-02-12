@@ -23,3 +23,20 @@ dt {
 dd {
 	margin: 0 1.5em 1.5em;
 }
+
+ul.no-bullet {
+	list-style: none;
+}
+
+ul.home-lists, .frontpage-widget-lists {
+	margin: 0;
+	padding: 0;
+}
+
+i {
+	cursor: pointer;
+}
+
+i.angle-down {
+	transform: rotate(-90deg);
+}

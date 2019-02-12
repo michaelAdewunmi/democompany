@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
  *
- * @package Fiction_Demo_Company
+ * @package democompany
  */
 
 get_header();

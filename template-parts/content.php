@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package Fiction_Demo_Company
+ * @package democompany
  */
 
 ?>
@@ -22,21 +22,21 @@
 			?>
 			<div class="entry-meta">
 				<?php
-				fiction_demo_company_posted_on();
-				fiction_demo_company_posted_by();
+				democompany_posted_on();
+				democompany_posted_by();
 				?>
 			</div><!-- .entry-meta -->
 		<?php endif; ?>
 	</header><!-- .entry-header -->
 
-	<?php fiction_demo_company_post_thumbnail(); ?>
+	<?php democompany_post_thumbnail(); ?>
 
 	<div class="entry-content">
 		<?php
 		the_content( sprintf(
 			wp_kses(
 				/* translators: %s: Name of current post. Only visible to screen readers */
-				__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'fiction_demo_company' ),
+				__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'democompany' ),
 				array(
 					'span' => array(
 						'class' => array(),
@@ -47,13 +47,13 @@
 		) );
 
 		wp_link_pages( array(
-			'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'fiction_demo_company' ),
+			'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'democompany' ),
 			'after'  => '</div>',
 		) );
 		?>
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer">
-		<?php fiction_demo_company_entry_footer(); ?>
+		<?php democompany_entry_footer(); ?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-<?php the_ID(); ?> -->

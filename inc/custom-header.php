@@ -8,33 +8,33 @@
  *
  * @link https://developer.wordpress.org/themes/functionality/custom-headers/
  *
- * @package Fiction_Demo_Company
+ * @package democompany
  */
 
 /**
  * Set up the WordPress core custom header feature.
  *
- * @uses fiction_demo_company_header_style()
+ * @uses democompany_header_style()
  */
-function fiction_demo_company_custom_header_setup() {
-	add_theme_support( 'custom-header', apply_filters( 'fiction_demo_company_custom_header_args', array(
+function democompany_custom_header_setup() {
+	add_theme_support( 'custom-header', apply_filters( 'democompany_custom_header_args', array(
 		'default-image'          => '',
 		'default-text-color'     => '000000',
 		'width'                  => 1000,
 		'height'                 => 250,
 		'flex-height'            => true,
-		'wp-head-callback'       => 'fiction_demo_company_header_style',
+		'wp-head-callback'       => 'democompany_header_style',
 	) ) );
 }
-add_action( 'after_setup_theme', 'fiction_demo_company_custom_header_setup' );
+add_action( 'after_setup_theme', 'democompany_custom_header_setup' );
 
-if ( ! function_exists( 'fiction_demo_company_header_style' ) ) :
+if ( ! function_exists( 'democompany_header_style' ) ) :
 	/**
 	 * Styles the header image and text displayed on the blog.
 	 *
-	 * @see fiction_demo_company_custom_header_setup().
+	 * @see democompany_custom_header_setup().
 	 */
-	function fiction_demo_company_header_style() {
+	function democompany_header_style() {
 		$header_text_color = get_header_textcolor();
 
 		/*
