@@ -5,7 +5,7 @@
 .site-header {
 	position: relative;
 	padding: 1em;
-    color: #fff;
+    color: #000;
     padding-bottom: 0;
     height: 65px;
     overflow: hidden;
@@ -24,6 +24,7 @@
 
 .site-branding {
 	min-height: 65px;
+	display: flex;
 }
 
 .site-title {
@@ -34,8 +35,9 @@
 	line-height: 1em;
 
 	a {
-		color: white;
+		color: #000;
 		text-decoration: none;
+		font-size: 20px;
 
 		&:hover,
 		&:focus {
@@ -49,18 +51,22 @@
 	font-size: .9em;
 	font-style: italic;
 	font-weight: 100;
+	color: #333;
+}
+
+.site-tile-and-description {
+	display: none;
+}
+
+@media screen and (min-width: 580px) {
+	.site-tile-and-description {
+		display: flex;
+		flex-direction: column;
+    	justify-content: center;
+	}
 }
 
 @media screen and (min-width: $query__medium) {
-	// .site-header {
-	// 	// display: flex;
-    //     // justify-content: space-between;
-	// }
-
-// 	.site-branding {
-// 		width: 35%;
-// 	}
-
 	.main-navigation {
 		margin-top: 10px;
 	}

@@ -150,6 +150,7 @@
                               'order_by'        => 'menu_order',
                            );
                            $grandchildren = new WP_Query($grandchildren_pages_query_args);
+
                            while($grandchildren->have_posts()){
                               $grandchildren->the_post();
                         ?>
@@ -160,6 +161,7 @@
                               <div  class="grandchild-page-content"><p><?php echo has_excerpt() ? get_the_excerpt() : wp_trim_words(get_the_content(), 18); ?></p></div>
                            </div>
                         </li>
+                        <hr />
                         <?php } //end while (for grandchildren pages) ?>
                      </ul>
                   </li>

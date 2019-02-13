@@ -166,15 +166,30 @@
 
 .grandchildren-lists {
     display: none;
-    //transform: scale(0);
     transition: all .3s ease-in-out;
 }
 
+.grandchildren-lists hr {
+    display: block;
+    margin: 40px 0;
+    width: 80%;
+
+    &:last-of-type {
+        display: none
+    }
+}
 
 .grandchildren-lists.reveal {
     display: block;
     margin-top: 20px;
-    //transform: scale(1);
+}
+
+.grandchildren-lists.reveal .grandchild {
+    margin-bottom: 20px;
+
+    &:last-of-type {
+        margin-bottom: 0;
+    }
 }
 
 
@@ -398,6 +413,10 @@
         justify-content: space-between;
         padding: 15px !important;
         margin-top: 0;
+    }
+
+    .grandchildren-lists hr {
+        display: none;
     }
 
     .carousel-svg-next.reveal-pages {

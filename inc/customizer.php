@@ -33,7 +33,7 @@ function democompany_customize_register( $wp_customize ) {
 	//Add a Custom customizer section
 	$wp_customize->add_section('theme_options',
 		array(
-			'title' 		=> __('Theme Options', 'democompany'),
+			'title' 		=> __('Footer Options', 'democompany'),
 			'priority'		=> 20,
 			'capability'	=> 'edit_theme_options',
 			'description'	=> __('Add/remove the footer logo', 'democompany'),
@@ -45,7 +45,7 @@ function democompany_customize_register( $wp_customize ) {
 		array(
 			'default'			=> get_theme_file_uri() . '/images/logo.jpg',
 			'type'				=> 'theme_mod',
-			'sanitize_callback'	=> 'sanitize_file_name'
+			'sanitize_callback'	=> 'esc_url'
 		)
 	);
 
@@ -65,7 +65,7 @@ function democompany_customize_register( $wp_customize ) {
 
 	$wp_customize->add_setting('copyright_info',
 		array(
-			'default'			=> 'rtPanel. All Rights Reserved. Designed by rtCamp',
+			//'default'			=> 'rtPanel. All Rights Reserved. Designed by rtCamp',
 			'type'				=> 'theme_mod',
 			'sanitize_callback'	=> 'sanitize_text_field',
 		)

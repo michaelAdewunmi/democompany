@@ -25,7 +25,7 @@
 						) );
 					?>
 				</div>
-					<p class="copyright-content">&copy; <?php echo date("Y") . ' ' . get_theme_mod('copyright_info') ?></p>
+					<p class="copyright-content">Copyright &copy; <?php echo date("Y") . ' ' . get_theme_mod('copyright_info') ?></p>
 			</div>
 			<div class="footer-img-holder col-12 col-md-5">
 				<?php
