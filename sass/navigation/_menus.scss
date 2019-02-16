@@ -63,7 +63,7 @@
 		color: $color__link-nav;
 		font-size: 15px;
 
-		&:hover, &:active, &:focus, &:visited {
+		&:hover, &:active, &:focus {
 			color: $color__link-hover;
 		}
 	}
@@ -72,6 +72,10 @@
 	.current-menu-item > a,
 	.current_page_ancestor > a,
 	.current-menu-ancestor > a {
+	}
+
+	.current-menu-item a {
+		color: #993408;
 	}
 }
 
