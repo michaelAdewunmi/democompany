@@ -8,7 +8,7 @@
 
 
 ## Example Usage (Demo Links)
-The example usage of this theme is found at https://fictionaldemocompany.gq
+The example usage of this theme is found at http://fictionaldemocompany.gq
 
 
 ## Theme Dependencies (Libraries Used)
