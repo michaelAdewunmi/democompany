@@ -4,6 +4,8 @@ build:
             dependencies:
                 before:
                     - composer require --dev johnpbloch/wordpress
+                    - composer require --dev phpunit/phpunit
+                    - bin/install-wp-tests.sh ?
 filter:
     dependency_paths:
         - wordpress/
